@@ -5,4 +5,5 @@ D:\Shubham\FinanceCaseStudy\PLUserInterface\obj\Debug\PLUserInterface.dll
 D:\Shubham\FinanceCaseStudy\PLUserInterface\obj\Debug\PLUserInterface.pdb
 D:\Shubham\FinanceCaseStudy\PLUserInterface\bin\AjaxControlToolkit.dll
 D:\Shubham\FinanceCaseStudy\PLUserInterface\obj\Debug\PLUserInterface.csprojResolveAssemblyReference.cache
-D:\Shubham\FinanceCaseStudy\PLUserInterface\bin\App_Data\App_Images\Logo.png
+D:\Shubham\FinanceCaseStudy\PLUserInterface\bin\BLL.dll
+D:\Shubham\FinanceCaseStudy\PLUserInterface\bin\BLL.pdb

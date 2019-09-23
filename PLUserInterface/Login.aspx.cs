@@ -11,7 +11,17 @@ namespace PLUserInterface
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+           
+        }
 
+        protected void Login_Click(object sender, EventArgs e)
+        {
+            
+            Session["Validated"] = true;
+            Session["Verified"] = true;
+            Session["Username"] = username.Text;
+            Response.Redirect("ProductList.aspx");
         }
 
       

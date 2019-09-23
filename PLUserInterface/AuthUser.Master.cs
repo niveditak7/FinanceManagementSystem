@@ -11,7 +11,23 @@ namespace PLUserInterface
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            
+            Session.Abandon();
+            
+            Response.Redirect("Index.aspx");
+        }
+
+        protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
+        {
 
         }
+
+        
     }
 }

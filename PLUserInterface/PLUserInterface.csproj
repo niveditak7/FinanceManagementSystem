@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="AuthUser.Master.cs">
       <DependentUpon>AuthUser.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AuthUser.Master.designer.cs">
       <DependentUpon>AuthUser.Master</DependentUpon>
@@ -174,6 +175,7 @@
     </Compile>
     <Compile Include="Local.Master.cs">
       <DependentUpon>Local.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Local.Master.designer.cs">
       <DependentUpon>Local.Master</DependentUpon>
@@ -188,6 +190,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{66345798-0e87-4590-a322-4d47a32e75ef}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
