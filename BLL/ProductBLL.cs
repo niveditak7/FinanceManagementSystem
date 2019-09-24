@@ -21,7 +21,6 @@ namespace BLL
             this.ProdID = 101;
             this.ProdName = "Apple";
             return this;
-        }
-       
+        }     
     }
 }

@@ -11,6 +11,7 @@ namespace PLUserInterface
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             this.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             Label lblLogin = (Label)Page.Master.FindControl("Label1");
             if (!Session.IsNewSession)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class BankBLL
+    public class BankBLL
     {
         public int BankID { get; set; }
         public string BankName { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    class CardType
+    public class CardType
     {
         public int CardTypeID { get; set; }
         public string CardName { get; set; }

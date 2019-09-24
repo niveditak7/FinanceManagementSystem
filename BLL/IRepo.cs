@@ -18,6 +18,8 @@ namespace BLL
 
             void Update(T entity);
 
+            List<T> GetALL();
+
         
     }
 }
