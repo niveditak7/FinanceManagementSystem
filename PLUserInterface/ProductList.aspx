@@ -1,82 +1,135 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AuthUser.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="PLUserInterface.ProductList" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
+        .login-page {
+            width: 360px;
+            padding: 8% 0 0;
+            margin: auto;
+        }
 
-        .TableCSS 
-        { 
-            border-style:none;
-            background-color:#3BA0D8; 
-            width: 850px; 
-        } 
+        .form {
+            position: relative;
+            display: block;
+            z-index: 1;
+            background: #FFFFFF;
+            /*max-width: 400px;*/
+            margin: 0 auto 10px;
+            padding: 45px;
+            text-align: center;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
 
-        .TableHeader 
-        { 
-            background-color:#66CCFF; 
-            color:#0066FF; 
-            font-size:large; 
-            font-family:Verdana; 
-         }     
+        .input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
 
-        .TableData 
-        { 
-            background-color:#82C13E;
-            color:#fff; 
-            font-family:Courier New; 
-            font-size:medium; 
-            font-weight:bold; 
+        .button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: #4CAF50;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            -webkit-transition: all 0.3 ease;
+            transition: all 0.3 ease;
+            cursor: pointer;
+        }
+
+            .button:hover, .button:active, .button:focus {
+                background: #43A047;
+            }
+
+            .img
+            {
+                max-height:100%;
+                height:100%;
+            }
+
+            
+
+        body {
+            background: #76b852; /* fallback for old browsers */
+            background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+            background: -moz-linear-gradient(right, #76b852, #8DC26F);
+            background: -o-linear-gradient(right, #76b852, #8DC26F);
+            background: linear-gradient(to left, #76b852, #8DC26F);
+            font-family: "Roboto", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-        
-            <LayoutTemplate> 
-                <table id="Table1" runat="server" class="TableCSS"> 
-                    <tr id="Tr1" runat="server" class="TableHeader"> 
-                        <td id="Td1" runat="server">Comment ID</td>
-                        <td id="Td2" runat="server">Blog ID</td> 
-                        <td id="Td3" runat="server">Date</td> 
-                        <td id="Td4" runat="server">Name</td>
-                    </tr> 
+    <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource2">
 
-                    <tr id="ItemPlaceholder" runat="server"> 
-                    </tr> 
-                    <tr id="Tr2" runat="server"> 
-                        <td id="Td6" runat="server" colspan="2"> 
-                            <asp:DataPager ID="DataPager1" runat="server"> 
-                                <Fields>
-                                    <asp:NextPreviousPagerField ButtonType="Link" /> 
-                                    <asp:NumericPagerField /> 
-                                    <asp:NextPreviousPagerField ButtonType="Link" /> 
-                                </Fields> 
-                            </asp:DataPager> 
-                        </td> 
-                    </tr> 
-                </table> 
-            </LayoutTemplate> 
 
-            <ItemTemplate> 
-                <tr class="TableData"> 
-                    <td> 
-                        <asp:Label  ID="Label1" runat="server" Text='<%# Eval("CategoryID")%>' > 
-                        </asp:Label> 
-                    </td> 
-                    <td> 
-                        <asp:Label  ID="Label2"  runat="server" Text='<%# Eval("CategoryName")%>'> 
-                        </asp:Label> 
-                    </td>
-                    <td> 
-                        <asp:Label  ID="Label3" runat="server"  Text='<%# Eval("Description")%>'> 
-                        </asp:Label> 
-                    </td>
-                    <td>
-                       <%-- <asp:Label ID="Label4"  runat="server"> --%>
-                             <%--<img src='<%# Eval("Picture")%>' height="100" width="100" /> --%>
-                       <%-- </asp:Label> --%>
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# "ShowImage.ashx?id=" + Eval("CategoryID") %>'  />
-                    </td>
-              </tr>                 
-            </ItemTemplate> 
+
+
+        <ItemTemplate>
+            <div class="form" style="display: inline-block; width: auto;">
+                <table style="border-collapse: separate; border-spacing: 5px;">
+
+
+                    <tr>
+                        <td rowspan="4">
+
+                            <asp:Image class="img" ID="Image2" runat="server" ImageUrl='<%# Eval("image")%>' Height="100%" />
+
+                        </td>
+
+                        <td>
+                            <div class="input">
+                                <h6 class="group inner list-group-item-heading"><u>Product Name</u></h6>
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("name")%>'> 
+                                </asp:Label>
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="input">
+                                <h6 class="group inner list-group-item-heading"><u>Product Details</u></h6>
+                                <asp:Label ID="Label3" runat="server" Text='<%# Eval("details")%>'> 
+                                </asp:Label>
+                            </div>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button1" runat="server" Text="Buy Now" class="button" />
+
+                        </td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </ItemTemplate>
+
     </asp:ListView>
+    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:abcConnectionString %>" SelectCommand="SELECT * FROM [demo1]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:abcConnectionString %>" SelectCommand="SELECT * FROM [Categories]"></asp:SqlDataSource>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>

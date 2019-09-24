@@ -13,4 +13,3 @@ C:\Users\AW204_PC5\Desktop\FinanceManagementSystem-master\FinanceManagementSyste
 C:\Users\AW204_PC5\Desktop\FinanceManagementSystem-master\FinanceManagementSystem-master\PLUserInterface\bin\AjaxControlToolkit.dll
 C:\Users\AW204_PC5\Desktop\FinanceManagementSystem-master\FinanceManagementSystem-master\PLUserInterface\obj\Debug\PLUserInterface.dll
 C:\Users\AW204_PC5\Desktop\FinanceManagementSystem-master\FinanceManagementSystem-master\PLUserInterface\obj\Debug\PLUserInterface.pdb
-C:\Users\AW204_PC5\Desktop\FinanceManagementSystem-master\FinanceManagementSystem-master\PLUserInterface\obj\Debug\PLUserInterface.csprojResolveAssemblyReference.cache

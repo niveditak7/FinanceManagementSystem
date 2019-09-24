@@ -16,10 +16,11 @@
 <body>
     <form id="form1" runat="server">
     <div>
-         <asp:Image AlternateText="Logo here" ImageUrl="App_Data/App_Images/Logo.png" ID="Image1" runat="server" />
+        
+         <asp:Image AlternateText="Logo here" ImageUrl="images/logo.jpg" ID="Image1" runat="server" />
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
-                <asp:HyperLink ID="HyperLink1" runat="server" class="navbar-brand" NavigateUrl="#">Hie User Name</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink1" runat="server" class="navbar-brand" NavigateUrl="#">Hi User Name</asp:HyperLink>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavBar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
